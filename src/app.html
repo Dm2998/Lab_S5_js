@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
+	</head>
+	<body>
+		<div>%sveltekit.body%</div>
+		<div id="products"></div>
+
+		
+
+<style>
+			/* Custom CSS for the footer section */
+.home-footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 40px 0; /* Padding top and bottom */
+	text-align: right;
+}
+
+.home-footer h3 {
+    font-size: 24px; /* Header font size */
+}
+
+.home-footer p {
+    font-size: 16px; /* Paragraph font size */
+}
+
+.home-footer ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove default list padding */
+}
+
+.home-footer ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.home-footer ul li a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.home-footer ul li a:hover {
+    color: #ffcc00; /* Link text color on hover */
+}
+
+/* end the css for the foother */
+</style>
+
+
+
+<!-- footer -->
+	<br>
+		<section class="home-footer">   
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3>About Planets</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+					</div>
+					<div class="col-md-6">
+						<h3>Planet Links</h3>
+						<ul class="list-unstyled">
+							<li class="planet-item"><i class="fas"></i><a href="#">Mercury</a></li>
+							<li class="planet-item"><i class="fas"></i><a href="#">Venus</a></li>
+							<li class="planet-item"><i class="fas"></i><a href="#">Earth</a></li>
+							<li class="planet-item"><i class="fas"></i><a href="#">Mars</a></li>
+							<!-- Add more planets as needed -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<script>
+	// Mapping of planet names to Font Awesome icon classes
+const planetIcons = {
+    "Mercury": "fa-globe",
+    "Venus": "fa-globe",
+    "Earth": "fa-globe",
+    "Mars": "fa-globe",
+    // Add more planets and their icons as needed
+};
+
+// Function to set the icon for each planet
+function setPlanetIcons() {
+    const planetItems = document.querySelectorAll('.planet-item');
+    planetItems.forEach(item => {
+        const planetName = item.querySelector('a').textContent.trim();
+        if (planetIcons.hasOwnProperty(planetName)) {
+            const iconElement = item.querySelector('i');
+            iconElement.classList.add(planetIcons[planetName]);
+        }
+    });
+}
+
+// Call the function to set the icons when the page loads
+window.addEventListener('load', setPlanetIcons);
+
+</script>  
+<!-- end Script and html for the footer planes -->
+
+
+
+		
+
+
+		
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+				<!-- Bootstrap Icons -->
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+				<!-- Bootstrap JavaScript Bundle with Popper -->
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		       <!-- Script JavaScript  -->
+			   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	</body>
+</html>
